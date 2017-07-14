@@ -1,25 +1,36 @@
 <!--index.vtl-->
-<h1>Hair Salon</h1>
-
+<h1>Magic Hair Salon</h1>
+<br>
+<img src="https://s-media-cache-ak0.pinimg.com/originals/fa/f8/95/faf895b9eb6d691b5efbbae8b7fdbffc.jpg" alt="a picture of a hair salon">
+<br>
 <h2> All Stylists: </h2>
 
 #if($stylists)
-  <p>Click on a stylist to see their clients:</p>
+  <p>Click on a stylist's name or picture to see their clients:</p>
   <ul>
     #foreach ($stylist in $stylists)
+      <br>
       <li><a href="/stylists/$stylist.getId()">$stylist.getName()</a></li>
+      <a href="/stylists/$stylist.getId()"><img height="160" width = "180" style="border: none;" src="$stylist.getImage()"></a>
+      <br>
     #end
+    <br>
   </ul>
 #else
+<br>
   <p>There are no stylists yet!</p>
 #end
 
 <h2>New Stylist:</h2>
 
 <form action="/stylists" method="post">
-  <label for="name">Stylist name</label>
+  <label for="name">Stylist's name</label>
   <input id="name" name="name" type="text">
-  <button type="submit" class="btn btn-success">Add Stylist</button>
+
+  <label for="image">Image link</label>
+  <input id="image" name="image" type="text" required>
+
+  <button type="submit" class="btn btn-primary">Add Stylist's name and Photo</button>
 </form>
 
 <h2>New Client:</h2>
@@ -37,6 +48,8 @@
     <input id="name" name="name" type="text" class="form-control">
   </div>
 
-  <button type="submit" class="btn btn-success">Add this Client!</button>
+  <button type="submit" class="btn btn-primary">Add this Client!</button>
 </form>
+<br>
+<br>
 <!--index.vtl-->

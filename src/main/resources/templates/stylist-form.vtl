@@ -3,7 +3,11 @@
 <p>Add a stylist here:</p>
 
 <form action="/stylists" method="post">
-  <label for="name">Stylist name</label>
+  <label for="name">Stylist's name</label>
   <input id="name" name="name" type="text">
-  <button type="submit" class="btn btn-success">Add this Stylist!</button>
+
+  <label for="image">Image link</label>
+  <input id="image" name="image" type="text" required>
+
+  <button type="submit" class="btn btn-primary">Add Stylist's name and Photo</button>
 </form>

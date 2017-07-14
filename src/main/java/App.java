@@ -19,7 +19,8 @@ public class App {
     post("/stylists", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       String name = request.queryParams("name");
-      Stylist newStylist = new Stylist(name);
+      String image = request.queryParams("image");
+      Stylist newStylist = new Stylist(name, image);
       newStylist.save();
       model.put("template", "templates/stylist-success.vtl");
       return new ModelAndView(model, layout);

@@ -1,0 +1,23 @@
+body {
+  background-color: #1f0033;
+}
+
+h1 {
+  color: #f8e6ff;
+}
+
+h2 {
+  color: #ebb3ff;
+}
+
+p {
+  color:  #c21aff;
+}
+
+label {
+  color:  #c21aff;
+}
+
+.btn {
+  background-color: #9600cc;
+}

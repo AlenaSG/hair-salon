@@ -1,9 +1,11 @@
 <!--stylist.vtl-->
-<h1>$stylist.getName() clients:</h1>
-
+<h1>$stylist.getName()'s clients:</h1>
+<img height="160" width = "180" src="$stylist.getImage()">
+<br>
 <ul>
   #foreach($client in $stylist.getClients())
    <li><a href="/stylists/$stylist.getId()/client/$client.getId()">$client.getName()</a></li>
+
   #end
 </ul>
 
@@ -14,11 +16,12 @@
   <input id="name" name="name" type="text">
   <button type="submit" class="btn btn-info">Update Stylist</button>
 </form>
-
+<br>
 <form action="/stylists/$stylist.getId()/delete" method="post">
   <button type="submit" class="btn btn-danger" id="delete-stylist">Delete this Stylist</button>
 </form>
-
+<br>
 <a href="/stylists/$stylist.getId()/clients/new">Add a new client</a>
+<br>
 <a href="/stylists">All stylists</a>
 <!--stylist.vtl -->
