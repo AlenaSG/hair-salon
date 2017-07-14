@@ -39,7 +39,7 @@ public class Client {
     } else {
       Client newClient = (Client) otherClient;
       return this.getName().equals(newClient.getName()) &&
-             this.getId() == newClinet.getId() &&
+             this.getId() == newClient.getId() &&
              this.getStylistId() == newClient.getStylistId();
     }
   }
@@ -58,7 +58,7 @@ public class Client {
   public static Client find(int id) {
     try(Connection con = DB.sql2o.open()) {
       String sql = "SELECT * FROM clients where id=:id";
-      Clent client = con.createQuery(sql)
+      Client client = con.createQuery(sql)
         .addParameter("id", id)
         .executeAndFetchFirst(Client.class);
       return client;

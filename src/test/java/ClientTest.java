@@ -20,7 +20,7 @@ public class ClientTest {
     assertEquals("John Doe", myClient.getName());
   }
 
-  @Test
+  @Test//f
   public void all_returnsAllInstancesOfClient_true() {
     Client firstClient = new Client("John Doe", 1);
     firstClient.save();
@@ -54,9 +54,9 @@ public class ClientTest {
 
   @Test
   public void save_returnsTrueIfNamesAretheSame() {
-    Task myTask = new Task("Mow the lawn", 1);
-    myTask.save();
-    assertTrue(Task.all().get(0).equals(myTask));
+    Client myClient = new Client("John Doe", 1);
+    myClient.save();
+    assertTrue(Client.all().get(0).equals(myClient));
   }
 
   @Test
@@ -89,7 +89,7 @@ public class ClientTest {
   public void delete_deletesClient_true() {
     Client myClient = new Client("John Doe", 1);
     myClient.save();
-    int myClientId = myClinet.getId();
+    int myClientId = myClient.getId();
     myClient.delete();
     assertEquals(null, Client.find(myClientId));
   }
