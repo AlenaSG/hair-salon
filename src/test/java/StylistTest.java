@@ -43,7 +43,7 @@ public class StylistTest {
    firstStylist.save();
    Stylist secondStylist = new Stylist("Jill Roe");
    secondStylist.save();
-   assertEquals(Category.find(secondCategory.getId()), secondCategory);
+   assertEquals(Stylist.find(secondStylist.getId()), secondStylist);
  }
 
   @Test
