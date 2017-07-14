@@ -69,7 +69,7 @@ public class ClientTest {
 
   @Test
   public void save_savesStylistIdIntoDB_true() {
-    Stylist myStylist = new Stylist("Jane Doe");
+    Stylist myStylist = new Stylist("Jane Doe", "");
     myStylist.save();
     Client myClient = new Client("John Doe", myStylist.getId());
     myClient.save();

@@ -16,6 +16,21 @@ _As an employee, I need to be able to update a client's details._
 _As an employee, I need to be able to delete a stylist if they're no longer employed here. (What happens to the clients?)_
 _As an employee, I need to be able to delete a client if they no longer visit our salon._
 
+## Code Specs
+
+|Behavior - Plain English|Input|Output|
+|---|---|---|
+|The user enters localhost: 4567 in their web-browser and see the index page for the app with info about the hairstylists and clients|localhost:4567|the app webpage with links to create and view stylists and clients|
+|The user is able to see a list of all stylists|click "All stylist"|Go to another page with a list of stylists|
+|The user is able to see a list of all clients for a certain stylist and his/her details|click "Name of the Stylist"|Go to another page with a list of all clients for this stylist and his/her details|
+|The user is able to add a stylist to the system|click "Add a stylist", then fill out text input fields with name and image url, press "Add this Stylist!" button|see a success page with links to see lists|
+|The user is able to update the stylist's name|enter a new name on the stylist's page, click "update stylist" button|see the name change on top of the page|
+|The user is able to delete a stylist's profile|on the individual stylist page  click "delete stylist" button|return to the index page with the list of remaining stylists|
+|The user is able to add a client to the stylist|click "Add a client", then fill out text input field with a name, press "Add this client!" button|see a success page with links to see lists|
+|The user is able to update the client's name|enter a new name on the client's page, click "update client" button|see the name change on top of the page|
+|The user is able to delete a client's profile|on the individual client's page  click "delete client" button|return to the stylist's page with the list of remaining clients|
+
+
 ## Setup/Installation Requirements
 
 * _At terminal, enter postgres_
