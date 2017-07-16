@@ -20,7 +20,7 @@ public class ClientTest {
     assertEquals("John Doe", myClient.getName());
   }
 
-  @Test//f
+  @Test
   public void all_returnsAllInstancesOfClient_true() {
     Client firstClient = new Client("John Doe", 1);
     firstClient.save();
