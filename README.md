@@ -1,4 +1,4 @@
-# _MAgic Hair Salon_
+# _Magic Hair Salon_
 
 #### _This application helps track stylists and clients, 07.14.2017_
 
