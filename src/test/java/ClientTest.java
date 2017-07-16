@@ -25,6 +25,7 @@ public class ClientTest {
     Client firstClient = new Client("John Doe", 1);
     firstClient.save();
     Client secondClient = new Client("Joe Roe", 1);
+    secondClient.save();
     assertEquals(true, Client.all().get(0).equals(firstClient));
     assertEquals(true, Client.all().get(1).equals(secondClient));
   }
